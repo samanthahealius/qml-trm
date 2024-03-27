@@ -1,10 +1,16 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Example</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
     <script src="TRM.js" type="text/javascript"></script>
     <link rel="stylesheet" href="TRM.css">
-
+</head>
+<body>
     <h1>API Search Form</h1>
     <form name="Form" method="post" action="/IamaDoctor/TestingGuide/ReferenceManual.aspx" id="Form" enctype="multipart/form-data"><div id="trm-search-bar" class="ui-widget trm-search-bar">
 		<input id="trm-search-text" name="keyword" class="ui-input trm-search-text ui-widget-content ui-corner-all" type="text" value="" placeholder="Test name, Keywords, Test code" autocomplete="off" autofocus="">
@@ -16,3 +22,5 @@
         <div id="trm-list-empty" class="trm-list-empty">No test found.</div>
         <div id="trm-list" class="trm-list"></div>
         </div>
+</body>
+</html>
