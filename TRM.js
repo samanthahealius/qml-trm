@@ -41,7 +41,26 @@ var aFileSizes = [[1, 0, 'bytes'], [1024, 0, 'KB'], [1024*1024, 1, 'MB'], [1024*
 // var sWebAPIHost = window.location == undefined || window.location.hostname.indexOf('.com.au') !== -1 ? 'https://webapi.healius.com.au' : 'http://api'; // without trailing slash!
 var sWebAPIHost = 'https://webapi.healius.com.au';
 var iBillingRulesFeatureID = 92;
-var sCompanyAbbr = 'QML';
+var sCompanyAbbr = ''; // Default value if none of the conditions match
+var domain = window.location.hostname.toLowerCase(); // Get the domain of the current page and convert to lowercase
+
+if (domain.includes('laverty')) {
+    sCompanyAbbr = 'LAV';
+} else if (domain.includes('qml')) {
+    sCompanyAbbr = 'QML';
+} else if (domain.includes('dorevitch')) {
+    sCompanyAbbr = 'DOR';
+} else if (domain.includes('tmlpath')) {
+    sCompanyAbbr = 'TML';
+} else if (domain.includes('wdp')) {
+    sCompanyAbbr = 'WDP';
+}
+else{
+    sCompanyAbbr = 'QML';
+}
+
+console.log(sCompanyAbbr); // For testing purposes, to see the output
+
 var bAutoSearch = false;
 
 jQuery(function(){
