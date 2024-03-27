@@ -56,7 +56,7 @@ if (domain.includes('laverty')) {
     sCompanyAbbr = 'WDP';
 }
 else{
-    sCompanyAbbr = 'QML';
+    sCompanyAbbr = 'LAV';
 }
 
 console.log(sCompanyAbbr); // For testing purposes, to see the output
@@ -655,21 +655,21 @@ Manual.prototype.open = function(){
 		this.content = jQuery('<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom">' + manualBuildContent(this) + '</div>');
 		this.element.append(this.content);
 
-		this.element.find('a.container').each(function(i, element){
-			new Tooltip(element, {
-				  html: true
-				, container: document.body
-				, delay: {show: 300, hide: 100}
-				, placement: 'bottom-start'
-				, trigger: 'hover click1'
-				, title: jQuery(element).data('tooltip')
-				, boundariesElement: 'viewport'
-				, popperOptions: {
-					  positionFixed: true
-					//, boundariesElement: 'viewport'
-				}
-			});
-		});
+		// this.element.find('a.container').each(function(i, element){
+		// 	new Tooltip(element, {
+		// 		  html: true
+		// 		, container: document.body
+		// 		, delay: {show: 300, hide: 100}
+		// 		, placement: 'bottom-start'
+		// 		, trigger: 'hover click1'
+		// 		, title: jQuery(element).data('tooltip')
+		// 		, boundariesElement: 'viewport'
+		// 		, popperOptions: {
+		// 			  positionFixed: true
+		// 			//, boundariesElement: 'viewport'
+		// 		}
+		// 	});
+		// });
 	}
 	this.opened = true;
 	this.title.removeClass('ui-corner-all').addClass('ui-accordion-header-active ui-state-active ui-corner-top');
