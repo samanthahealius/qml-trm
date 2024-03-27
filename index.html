@@ -6,21 +6,82 @@
     <title>Search Example</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/samanthahealius/qml-trm@main/TRM.css">
     <script src="https://cdn.jsdelivr.net/gh/samanthahealius/qml-trm@main/TRM.js"></script>
+    <style>
+        .trm-container {
+        background: white;
+        border: 1px solid #CDD7E3;
+        border-radius: 8px;
+        padding: 16px;
+    }
 
-<script src="TRM.js" type="text/javascript"></script>
+    .trm-container h5 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 22px;
+        color: #333F48;
+        margin: 0 0 20px;
+    }
+
+    input#trm-search-text {
+        border: 0;
+        font-family: 'Roboto', sans-serif;
+        color: #A6ADB3;
+        font-size: 16px;
+    }
+    button#trm-search-reset span {
+        color: #033572;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+    }
+    .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
+        font-family: 'Roboto', sans-serif;
+    }
+    #trm-search-bar .ui-widget.ui-button {
+        border: 0;
+        opacity: 1;
+        padding: 12px 24px;
+    }
+
+    button#trm-search-go {
+        background: #033572 !important;
+    }
+    .trm-input-container {
+        border-radius: 8px;
+        border: 1px solid #CDD7E3;
+        background: #FFF;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+    }
+    #trm-search-bar .ui-widget.ui-button .ui-button-text::before {
+    content: none;
+}
+
+
+    </style>
 </head>
 <body>
-    <form name="Form" method="post" action="/IamaDoctor/TestingGuide/ReferenceManual.aspx" id="Form" enctype="multipart/form-data"><div id="trm-search-bar" class="ui-widget trm-search-bar">
-		<input id="trm-search-text" name="keyword" class="ui-input trm-search-text ui-widget-content ui-corner-all" type="text" value="" placeholder="Test name, Keywords, Test code" autocomplete="off" autofocus="">
-		<span id="trm-loading" style="display: none"></span>
-		<button id="trm-search-go" type="submit" class="trm-search-go ui-button ui-corner-all ui-widget ui-button-disabled ui-state-disabled" role="button" disabled="" aria-disabled="false><span class=" ui-button-text"="">Search</button>
-		<button id="trm-search-reset" type="button" class="trm-search-reset ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-only" role="button" aria-disabled="true" disabled=""><span class="ui-button-text">Clear</span></button>
+    
+    <form  name="Form" method="post" action="/IamaDoctor/TestingGuide/ReferenceManual.aspx" id="Form" enctype="multipart/form-data"><div id="trm-search-bar" class="ui-widget trm-search-bar">
+        <div class="trm-container">
+            <h5>Search test reference manual</h5>
+            <div class="trm-input-container">
+                <input id="trm-search-text" name="keyword" class="ui-input trm-search-text ui-widget-content ui-corner-all" type="text" value="" placeholder="Test name, Keywords, Test code" autocomplete="off" autofocus="">
+                <span id="trm-loading" style="display: none"></span>
+                <button id="trm-search-reset" type="button" class="trm-search-reset ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-only" role="button" aria-disabled="true" disabled=""><span class="ui-button-text">Clear</span></button>
+
+                <button id="trm-search-go" type="submit" class="trm-search-go ui-button ui-corner-all ui-widget ui-button-disabled ui-state-disabled" role="button" disabled="" aria-disabled="false"> <span class="ui-button-text">Search</span></button>
+            </div>
+        </div>
     </form>
     <div id="trm-list-container">
         <div id="trm-list-empty" class="trm-list-empty">No test found.</div>
         <div id="trm-list" class="trm-list"></div>
-        </div>
+    </div>
 </body>
 </html>
