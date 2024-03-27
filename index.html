@@ -57,6 +57,7 @@
         padding: 5px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
     #trm-search-bar .ui-widget.ui-button .ui-button-text::before {
     content: none;
@@ -114,9 +115,12 @@ h3.ui-accordion-header.ui-helper-reset.ui-state-default.ui-accordion-header-acti
             <div class="trm-input-container">
                 <input id="trm-search-text" name="keyword" class="ui-input trm-search-text ui-widget-content ui-corner-all" type="text" value="" placeholder="Test name, Keywords, Test code" autocomplete="off" autofocus="">
                 <span id="trm-loading" style="display: none"></span>
-                <button id="trm-search-reset" type="button" class="trm-search-reset ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-only" role="button" aria-disabled="true" disabled=""><span class="ui-button-text">Clear</span></button>
+                <div>
+                    <button id="trm-search-reset" type="button" class="trm-search-reset ui-button ui-widget ui-state-default ui-corner-all ui-button-disabled ui-state-disabled ui-button-text-only" role="button" aria-disabled="true" disabled=""><span class="ui-button-text">Clear</span></button>
 
-                <button id="trm-search-go" type="submit" class="trm-search-go ui-button ui-corner-all ui-widget ui-button-disabled ui-state-disabled" role="button" disabled="" aria-disabled="false"> <span class="ui-button-text">Search</span></button>
+                    <button id="trm-search-go" type="submit" class="trm-search-go ui-button ui-corner-all ui-widget ui-button-disabled ui-state-disabled" role="button" disabled="" aria-disabled="false"> <span class="ui-button-text">Search</span></button>
+                </div>
+                
             </div>
         </div>
     </form>
