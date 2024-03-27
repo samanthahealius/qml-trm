@@ -32,6 +32,9 @@
         color: #A6ADB3;
         font-size: 16px;
     }
+    div#trm-list-container {
+        max-width: 100%;
+    }
     button#trm-search-reset span {
         color: #033572;
         font-family: 'Roboto', sans-serif;
@@ -109,7 +112,6 @@ h3.ui-accordion-header.ui-helper-reset.ui-state-default.ui-accordion-header-acti
     </style>
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/gh/samanthahealius/qml-trm@main/TRM.js"></script>
 
     
     <form  name="Form" method="post" action="/IamaDoctor/TestingGuide/ReferenceManual.aspx" id="Form" enctype="multipart/form-data"><div id="trm-search-bar" class="ui-widget trm-search-bar">
@@ -131,5 +133,7 @@ h3.ui-accordion-header.ui-helper-reset.ui-state-default.ui-accordion-header-acti
         <div id="trm-list-empty" class="trm-list-empty">No test found.</div>
         <div id="trm-list" class="trm-list"></div>
     </div>
+    <script src="https://cdn.jsdelivr.net/gh/samanthahealius/qml-trm@main/TRM.js"></script>
+
 </body>
 </html>
