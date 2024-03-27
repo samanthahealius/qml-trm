@@ -8,7 +8,18 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/samanthahealius/qml-trm@main/TRM.css">
+    <script src="https://cdn.jsdelivr.net/gh/samanthahealius/qml-trm@main/tooltip.js"></script>
     <style>
+        .tooltip-content {
+            display: none; /* Initially hidden */
+            position: absolute;
+            z-index: 1000;
+            width: auto; /* Adjust based on your content */
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
         .trm-container {
         background: white;
         border: 1px solid #CDD7E3;
